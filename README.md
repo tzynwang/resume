@@ -1,24 +1,19 @@
-# landing-page
+# Tzu-Yin's Resume
 
-## Project setup
-```
-npm install
-```
+## Content
+- Landing
+- Skills
+- Projects
+- Work Experience
+- Contact Form
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Tech
+- Vue2, vue-router
+- SCSS
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Developer
+[Tzu-Yin Wang](https://github.com/tzynwang)
+[Blog](https://tzynwang.github.io/)
+[tzyn.wang◆gmail.com](tzyn.wang@gmail.com)
