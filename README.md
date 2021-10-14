@@ -15,5 +15,3 @@
 
 ## Developer
 [Tzu-Yin Wang](https://github.com/tzynwang)
-[Blog](https://tzynwang.github.io/)
-[tzyn.wang◆gmail.com](tzyn.wang@gmail.com)
