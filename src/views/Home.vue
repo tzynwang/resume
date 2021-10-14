@@ -325,7 +325,7 @@ h3 {
 
 .contact-container {
   max-width: 600px;
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0;
 }
 
 footer {
