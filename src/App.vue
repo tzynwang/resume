@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <headerNav />
-    <router-view :cursor-element="cursorElement"></router-view>
+    <router-view :cursor-element="cursorElement" />
     <footer ref="footer">
       2021 © 王紫吟 |
       <a href="https://github.com/tzynwang" target="_blank">GitHub</a> |
