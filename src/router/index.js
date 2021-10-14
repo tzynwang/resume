@@ -20,7 +20,6 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: 'history',
   scrollBehavior: (to) => {
     return to.hash ? { selector: to.hash, behavior: 'smooth' } : { x: 0, y: 0 }
   }
