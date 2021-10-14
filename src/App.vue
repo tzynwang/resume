@@ -2,18 +2,22 @@
   <div id="app">
     <headerNav />
     <router-view :cursor-element="cursorElement"></router-view>
-    <footer>
-      2021 © 王紫吟
+    <footer ref="footer">
+      2021 © 王紫吟 |
+      <a href="https://github.com/tzynwang" target="_blank">GitHub</a> |
+      <a href="https://tzynwang.github.io/" target="_blank">Tech Blog</a>
     </footer>
     <div class="cursor" ref="cursor"></div>
   </div>
 </template>
 
 <script>
+import { spinMixin } from '@/utils/mixins'
 import headerNav from '@/components/headerNav.vue'
 
 export default {
   name: 'App',
+  mixins: [spinMixin],
   components: {
     headerNav
   },
@@ -28,10 +32,14 @@ export default {
     window.addEventListener('mousemove', this.moveCursor)
     window.addEventListener('scroll', this.hideCursor)
     this.cursorElement = this.$refs.cursor
+
+    this.$refs.footer.addEventListener('mouseover', this.overAnchorAddSpin)
   },
   beforeDestroy() {
     window.removeEventListener('mousemove', this.moveCursor)
     window.removeEventListener('scroll', this.hideCursor)
+
+    this.$refs.footer.removeEventListener('mouseover', this.overAnchorAddSpin)
   },
   methods: {
     moveCursor(event) {
@@ -70,7 +78,7 @@ export default {
   height: 36px;
   z-index: 999;
 
-  background-color: #3F4D4D;
+  background-color: #3f4d4d;
   mix-blend-mode: difference;
 
   transform: translate(-50%, -50%) rotate(45deg);
@@ -85,7 +93,7 @@ export default {
 }
 
 .scale-cursor {
-  transform: translate(-50%, -50%) rotate(45deg) scale(.25);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0.25);
 }
 
 .hide-cursor {
@@ -93,6 +101,6 @@ export default {
 }
 
 .spin-cursor {
-  transform: translate(-50%, -50%) rotate(225deg) scale(.5);
+  transform: translate(-50%, -50%) rotate(225deg) scale(0.5);
 }
 </style>
