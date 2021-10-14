@@ -45,6 +45,10 @@ export default {
     &__responsibility {
       list-style: square inside;
       padding: 0 0 .5rem 0;
+
+      &:last-child {
+        padding: 0;
+      }
     }
   }
 }
